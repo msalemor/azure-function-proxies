@@ -72,7 +72,6 @@ namespace TestHttpFunc
 			},
 			"backendUri": "http://localhost:7071/api/Function1",
 			"requestOverrides": {
-				//"backend.request.headers.x-functions-key": "%ANOTHERAPP_API_KEY%"
 				"backend.request.headers.x-functions-key": "Test"
 			}
 		},
