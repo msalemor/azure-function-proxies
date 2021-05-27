@@ -93,9 +93,9 @@ namespace TestHttpFunc
 
 - Run the Azure function and for each run in the debug console notice the headers
 - Curl: http://localhost:7071/api/Function1 
-> **Note:** Should not include the x-functions-key header
+> **Note:** Should not include the ```x-functions-key``` header
 - Curl http://localhost:7071/api/test1 
-> **Note:** Should include the x-functions-key header
+> **Note:** Should include the ```x-functions-key``` header with value ```test```
 
 - Run following points to an external site and it is using the Application Settings to extract the value for ```ANOTHER_API_KEY```
 - Curl http://localhost:7071/api/test2
