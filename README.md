@@ -6,7 +6,7 @@
 - Create an Azure Function Solution
 - Create an HttpTrigger function called Function1
 - Add a proxies.json file to the Azure Function project
-> **Note:** Click the proxies.json file and in properties make sure to change the ```Copy to Output Directory = Copy Always```
+> **Note:** Click the proxies.json file and in properties make sure to change the setting ```Copy to Output Directory = Copy Always```
 
 ## Modify the Function1 code to show the headers
 
