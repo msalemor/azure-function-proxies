@@ -57,9 +57,9 @@ namespace TestHttpFunc
 ## Add the following contents to the proxies.json file
 
 - This code creates two proxies
-- Proxy1: Adds the ```x-functions-x``` with value ```Test``` and sends it to forwards it to ```https://{}/api/Function1```
-- Proxy2: Adds the ```x-functions-x``` with value ```%ANOTHERAPP_API_KEY%``` that comes from the application settings, and sends it to forwards it to ```https://www.microsoft.com```.
-> **Note:** the URL for Proxy 2 should be set to your test external function expecting the custom header
+  - Proxy1: Adds the ```x-functions-x``` with value ```Test``` and sends it to forwards it to ```https://{}/api/Function1```
+  - Proxy2: Adds the ```x-functions-x``` with value ```%ANOTHERAPP_API_KEY%``` that comes from the application settings, and sends it to forwards it to ```https://www.microsoft.com```.
+  - > **Note:** the URL for Proxy 2 should be set to your test external function expecting the custom header
 
 ```json
 {
