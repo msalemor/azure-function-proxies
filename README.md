@@ -97,5 +97,4 @@ namespace TestHttpFunc
 - Curl http://localhost:7071/api/test1 
 > **Note:** Should include the ```x-functions-key``` header with value ```test```
 
-- Run following points to an external site and it is using the Application Settings to extract the value for ```ANOTHER_API_KEY```
-- Curl http://localhost:7071/api/test2
+To test proxy ```test2```, you will need to point the backend URL to a site you want to test and provide the customer header and key for the test.
