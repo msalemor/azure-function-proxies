@@ -6,7 +6,7 @@ Using Azure function proxies
 - Create an Azure Function Solution
 - Create an HttpTrigger function called Function1
 - Add a proxies.json file to the Azure Function project
-- > Click the proxies.json file and in properties make sure to change the ```Copy to Output Directory = Copy Always```
+> **Note:** Click the proxies.json file and in properties make sure to change the ```Copy to Output Directory = Copy Always```
 
 ## Modify the Function1 code to show the headers
 
@@ -56,6 +56,11 @@ namespace TestHttpFunc
 
 ## Add the following contents to the proxies.json file
 
+- This code creates two proxies
+- Proxy1: Adds the ```x-functions-x``` with value ```Test``` and sends it to forwards it to ```https://{}/api/Function1```
+- Proxy2: Adds the ```x-functions-x``` with value ```%ANOTHERAPP_API_KEY%``` that comes from the application settings, and sends it to forwards it to ```https://www.microsoft.com```.
+> **Note:** the URL for Proxy 2 should be set to your test external function expecting the custom header
+
 ```json
 {
 	"$schema": "http://json.schemastore.org/proxies",
@@ -89,9 +94,9 @@ namespace TestHttpFunc
 
 - Run the Azure function and for each run in the debug console notice the headers
 - Curl: http://localhost:7071/api/Function1 
-- > Should not include the x-functions-key header
+> **Note:** Should not include the x-functions-key header
 - Curl http://localhost:7071/api/test1 
-- > Should include the x-functions-key header
+> **Note:** Should include the x-functions-key header
 
 - Run following points to an external site and it is using the Application Settings to extract the value for ```ANOTHER_API_KEY```
 - Curl http://localhost:7071/api/test2
